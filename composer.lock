@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc1e7b4ee0b38f3a6bc20b59f7f04c5e",
+    "content-hash": "bf1ad46e8600c83e6bb38e7560618de5",
     "packages": [
         {
             "name": "brick/math",
@@ -1335,16 +1335,16 @@
         },
         {
             "name": "laravel/sanctum",
-            "version": "v4.2.1",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sanctum.git",
-                "reference": "f5fb373be39a246c74a060f2cf2ae2c2145b3664"
+                "reference": "dadd2277ff0f05cdb435c8b6a0bcedcf3b5519a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sanctum/zipball/f5fb373be39a246c74a060f2cf2ae2c2145b3664",
-                "reference": "f5fb373be39a246c74a060f2cf2ae2c2145b3664",
+                "url": "https://api.github.com/repos/laravel/sanctum/zipball/dadd2277ff0f05cdb435c8b6a0bcedcf3b5519a9",
+                "reference": "dadd2277ff0f05cdb435c8b6a0bcedcf3b5519a9",
                 "shasum": ""
             },
             "require": {
@@ -1394,7 +1394,7 @@
                 "issues": "https://github.com/laravel/sanctum/issues",
                 "source": "https://github.com/laravel/sanctum"
             },
-            "time": "2025-11-21T13:59:03+00:00"
+            "time": "2026-01-15T14:37:16+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -6517,6 +6517,67 @@
             "time": "2025-03-19T14:43:43+00:00"
         },
         {
+            "name": "laravel/breeze",
+            "version": "v2.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "1a29c5792818bd4cddf70b5f743a227e02fbcfcd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/1a29c5792818bd4cddf70b5f743a227e02fbcfcd",
+                "reference": "1a29c5792818bd4cddf70b5f743a227e02fbcfcd",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^11.0|^12.0",
+                "illuminate/filesystem": "^11.0|^12.0",
+                "illuminate/support": "^11.0|^12.0",
+                "illuminate/validation": "^11.0|^12.0",
+                "php": "^8.2.0",
+                "symfony/console": "^7.0"
+            },
+            "require-dev": {
+                "laravel/framework": "^11.0|^12.0",
+                "orchestra/testbench-core": "^9.0|^10.0",
+                "phpstan/phpstan": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Breeze\\BreezeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Breeze\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
+            "keywords": [
+                "auth",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/breeze/issues",
+                "source": "https://github.com/laravel/breeze"
+            },
+            "time": "2025-07-18T18:49:59+00:00"
+        },
+        {
             "name": "laravel/pail",
             "version": "v1.2.4",
             "source": {
@@ -6969,16 +7030,16 @@
         },
         {
             "name": "pestphp/pest",
-            "version": "v4.3.0",
+            "version": "v4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest.git",
-                "reference": "e86bec3e68f1874c112ca782fb9db1333f3fe7ab"
+                "reference": "bc57a84e77afd4544ff9643a6858f68d05aeab96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest/zipball/e86bec3e68f1874c112ca782fb9db1333f3fe7ab",
-                "reference": "e86bec3e68f1874c112ca782fb9db1333f3fe7ab",
+                "url": "https://api.github.com/repos/pestphp/pest/zipball/bc57a84e77afd4544ff9643a6858f68d05aeab96",
+                "reference": "bc57a84e77afd4544ff9643a6858f68d05aeab96",
                 "shasum": ""
             },
             "require": {
@@ -6991,7 +7052,7 @@
                 "pestphp/pest-plugin-profanity": "^4.2.1",
                 "php": "^8.3.0",
                 "phpunit/phpunit": "^12.5.4",
-                "symfony/process": "^7.4.0|^8.0.0"
+                "symfony/process": "^7.4.3|^8.0.0"
             },
             "conflict": {
                 "filp/whoops": "<2.18.3",
@@ -7069,7 +7130,7 @@
             ],
             "support": {
                 "issues": "https://github.com/pestphp/pest/issues",
-                "source": "https://github.com/pestphp/pest/tree/v4.3.0"
+                "source": "https://github.com/pestphp/pest/tree/v4.3.1"
             },
             "funding": [
                 {
@@ -7081,7 +7142,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-12-30T19:48:33+00:00"
+            "time": "2026-01-04T16:29:59+00:00"
         },
         {
             "name": "pestphp/pest-plugin",
