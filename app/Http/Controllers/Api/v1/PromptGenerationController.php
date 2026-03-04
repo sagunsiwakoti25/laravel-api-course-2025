@@ -17,15 +17,50 @@ class PromptGenerationController extends Controller
 
     }
    
-
-    public function index()
+    public function index(Request $request)
     {
-        $user = request()->user();
-        $imageGenerations = $user->imageGenerations()->latest()->paginate(10);
+        $user = $request->user();
+        $query = $user->imageGenerations();
 
+        // Apply search filter
+        if ($request->has('search') && !empty($request->search)) {
+            $query->where('generated_prompt', 'LIKE', '%' . $request->search . '%');
+        }
+
+        // Apply sorting
+        $allowedSortFields = ['created_at', 'generated_prompt', 'original_filename', 'file_size'];
+        $sortField = 'created_at';
+        $sortDirection = 'desc';
+
+        if ($request->has('sort') && !empty($request->sort)) {
+            $sort = $request->sort;
+            if (str_starts_with($sort, '-')) {
+                $sortField = substr($sort, 1);
+                $sortDirection = 'desc';
+            } else {
+                $sortField = $sort;
+                $sortDirection = 'asc';
+            }
+        }
+
+        // Validate sort field
+        if (!in_array($sortField, $allowedSortFields)) {
+            $sortField = 'created_at';
+            $sortDirection = 'desc';
+        }
+
+        $query->orderBy($sortField, $sortDirection);
+
+        $imageGenerations = $query->paginate($request->get('per_page'));
         return ImageGenerationResource::collection($imageGenerations);
     }
 
+    /**
+     * Generate a prompt from the uploaded image and store the result.
+     * @param GeneratePromptRequest $request
+     * @return ImageGenerationResource
+     * Handle the incoming request.
+     */
     public function store(GeneratePromptRequest $request)
     {
         $user = request()->user();
